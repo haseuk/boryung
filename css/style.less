@@ -1,0 +1,184 @@
+@import "asset";
+@use-vw: true;
+@vw: 750;
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;500;700;900&display=swap');
+
+html { font-family: 'Noto Serif KR', serif; }
+a { .ib; .pointer; }
+select { outline: none; font-family: 'Noto Serif KR', serif; }
+
+
+
+
+.container {
+  .wrap { .fs(0); .tc; color:#2d2d2f; .pb(30); .-box;
+    .header {
+      header { .h(80); .rel; z-index: 20;
+        .logo { .wh(207,31); .contain('../img/mo/logo.png'); .ib; .abs; .lb(69,0); }
+        .menu { .wh(110,74); .abs; .rt;
+          &:after { .cnt; .wh(60,24); .contain('../img/mo/ham.png'); .abs; .lb; pointer-events: none; }
+        }
+        .lang-ch { .abs; .rt(129,45);
+          a { .fs(30); color:#a29992; .medium; .lh1; }
+        }
+      }
+      .gnb { .fix; .lt; .f; z-index: 1; .ml(100vw); opacity: 0; transition: margin-left 0.3s, opacity 0.1s;
+        .dim { .fix; .f; .lt; .bgc(#000); opacity: 0.85; }
+        .gnb-list { .wh(505,100%); .bgc(#fff); .rel; z-index: 1; .p(42,66,0,70); .-box; .tl;
+          .lang-ch { .abs; .rt(122,45);
+            a { .fs(30); color:#a29992; .medium; .lh1; }
+          }
+          h1 { .wh(367,56); .contain('../img/mo/boryung-s.png'); .mt(313); }
+          ul { .p(74,0); .-box; .-t(#afa89e); .-b(#afa89e); .mt(100);
+            li { .fs(46); color:#6e675f; .light; .ls(-0.05em); .mb(14);
+              .depth { .pl(38); .-box; .mt(5);
+                a { .fs(30); .lh(48); .medium; .block; }
+              }
+            }
+          }
+          .close { .wh(104,78); .abs; .rt;
+            &:after { .cnt; .wh(38,38); .contain('../img/mo/x.png'); .abs; .rt(66,42); pointer-events: none; }
+          }
+        }
+        &.on { opacity:1; .ml(249); z-index: 30; }
+      }
+      &.main-h header {
+        .logo { .hide; }
+      }
+    }
+
+    article {
+      section { .rel; z-index: 2;
+        &.main { .h(1313); .pt(275); .-box;
+          h1 { .wh(559,83); .contain('../img/mo/boryung.png'); .mh-c; transform: translateY(0); transition: all 1s; }
+          .ani { .fs(54); .ls(-0.05em); .tl; .abs; .lt(103,550); .hide;
+            &.ready { .ib; }
+          }
+          .page-link { .tl; .mt(106); .pl(320); .-box;
+            li { .fs(54); .ls(-0.05em); .mb(10); opacity: 1; transition: opacity 0.7s;
+              &:nth-child(1) { transition-delay: 0.2s; }
+              &:nth-child(2) { transition-delay: 0.8s; }
+              &:nth-child(3) { transition-delay: 0.4s; }
+              &:nth-child(4) { transition-delay: 1.0s; }
+              &:nth-child(5) { transition-delay: 0.6s; }
+              &:nth-child(6) { transition-delay: 1.2s; }
+              &:last-child { color:#a29992; .mt(20); }
+            }
+          }
+          .home { .wh(330,100); .tl; .abs; .rt(93,1069); transform: translateY(0); overflow: hidden; opacity: 1; transition: all 0.7s;
+            a { .fs(30); .ls(-0.025); .bold; .lh(96); .f; .-a(#2d2d2f,2px); .-box; .ib; .pl(25); .rel;
+              &:after { .cnt; .wh(35,20); .contain('../img/mo/arr-r.png'); .abs; .rt(25,40); }
+            }
+          }
+          .v-bg { .wh(198,1322); .contain('../img/mo/boryung-ver.png'); .abs; .lt(-12,-53); opacity: 1; transition: opacity 0.7s; }
+
+          .ready {
+            &.h1 { transform: translateY(26vw); opacity: 1;
+              &.up { .bg-y(83); opacity: 0; }
+            }
+            &.page-link li { opacity: 0; }
+            &.home { opacity:0; transform: translateY(7vw); }
+            &.v-bg { opacity:0; .l(-13.2vw); }
+          }
+        }
+
+
+        &.ceo { .p(0,70); .-box; .tl;
+          h2 { .fs(80); .lh(115); .medium; .ls(-0.05em); .mt(130); }
+          .select-box { .w(383); .-b(#2d2d2f,4px); .pb(12); .-box; .rel; .mt(60);
+            &:after { .cnt; .wh(40,23); .contain('../img/mo/arr-d.png'); .abs; .rt(3,17); pointer-events: none; }
+            ul {
+              li { .fs(40); .bold; .h(48); .lh(48); .hide;
+                a { pointer-events: none; }
+                &:nth-child(1) { .ib; }
+                i.en { .ls(-0.075em); }
+              }
+            }
+            &.active {
+              &:after { transform: rotate(-180deg); }
+              ul li { .ib;
+                &:last-child { .mt(32); }
+                a { pointer-events: auto; }
+              }
+            }
+          }
+          &[data-nm="1"] .ceo-letter .tit img { .wh(494,55); }
+          &[data-nm="2"] .ceo-letter .tit img { .wh(595,52); }
+
+          .ceo-letter { .mt(84); .pb(197); .-box; .-b(#000,2px);
+            .tit { .fs(48); .ls(-0.075em); .light;
+              .nm { .fs(24); }
+            }
+            .txt { .fs(24); .lh(36); .ls(-0.075em); .mt(18); .regular;
+              p { .mb(37);
+                &.date { .m(50,0,0); }
+                &.sign { .fs(30); .mt(8);
+                  &.en { .bold; }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    &.kr-view {
+      .header {
+        .lang-ch {
+          .kr-lang { .hide; }
+          .eng-lang { .ib; }
+        }
+      }
+      article {
+        .en { .hide; }
+        .kr { .ib; }
+      }
+    }
+    &.en-view {
+      .header {
+        .lang-ch {
+          .eng-lang { .hide; }
+          .kr-lang { .ib; }
+        }
+      }
+      article {
+        .kr { .hide; }
+        .en { .ib; }
+      }
+    }
+
+    footer { .rel;
+      .copy { .fs(18); .lh(31); color:#a29992; .tl; .p(30,0,0,70); .-box; }
+      .go-top { .fs(20); .black; color:#3b3b3c; .tc; .wh(80,70); .-a(#3b3b3c,2px); .-box; .abs; .rt(20,-37); .pt(30); .bgc(#fff); z-index: 5;
+        &:after { .cnt; .wh(17,10); .abs; .lt(30,15); .contain('../img/mo/go-top.png'); pointer-events: none; }
+      }
+      &.main-ft .go-top { .hide; }
+    }
+
+
+
+    [mov] { opacity: 0; transform: translateY(70px); .rel; transition: opacity 0.7s, transform 0.7s;}
+    [mov="in"] { opacity: 1; transform: translateY(0); transition-delay: 0.1s;
+      &[data-delay="1"] { transition-delay: 0.1s; }
+      &[data-delay="2"] { transition-delay: 0.2s; }
+      &[data-delay="3"] { transition-delay: 0.3s; }
+      &[data-delay="4"] { transition-delay: 0.4s; }
+      &[data-delay="5"] { transition-delay: 0.5s; }
+      &[data-delay="6"] { transition-delay: 0.6s; }
+      &[data-delay="7"] { transition-delay: 0.7s; }
+      &[data-delay="8"] { transition-delay: 0.8s; }
+      &[data-delay="9"] { transition-delay: 0.9s; }
+      &[data-delay="10"] { transition-delay: 1.0s; }
+      &[data-delay="11"] { transition-delay: 1.1s; }
+      &[data-delay="12"] { transition-delay: 1.2s; }
+      &[data-delay="13"] { transition-delay: 1.3s; }
+      &[data-delay="14"] { transition-delay: 1.4s; }
+      &[data-delay="15"] { transition-delay: 1.5s; }
+      &[data-delay="16"] { transition-delay: 1.6s; }
+      &[data-delay="17"] { transition-delay: 1.7s; }
+      &[data-delay="18"] { transition-delay: 1.8s; }
+    }
+  }
+}

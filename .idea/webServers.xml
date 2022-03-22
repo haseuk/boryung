@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="05e4463c-cc8d-45ec-ba13-0c2ad043ec81" name="boryung" url="http://boryung.devcraft.kr">
+        <fileTransfer rootFolder="/var/www/boryung" accessType="SFTP" host="devcraft.kr" port="22" sshConfigId="87da5170-b709-4742-bedd-b63ef6043f13" sshConfig="root@devcraft.kr:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
