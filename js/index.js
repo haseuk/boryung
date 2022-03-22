@@ -61,15 +61,14 @@ if(ceoSelect)ceoSelect.addEventListener('click', function() {
 });
 
 let ceo = document.querySelector('.ceo');
+let section = document.querySelector('section');
 let selectList = document.querySelectorAll('.select-box li a');
 Array.prototype.forEach.call(selectList, function(e) {
   e.addEventListener('click', function() {
     let idx = e.getAttribute('data-list');
-    ceo.setAttribute('data-nm', idx);
+    section.setAttribute('data-nm', idx);
   })
 });
-
-
 
 
 

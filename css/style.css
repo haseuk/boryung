@@ -226,6 +226,66 @@ select {
 .container .wrap article section {
   position: relative;
   z-index: 2;
+  padding-bottom: 26.26666667vw !important;
+  box-sizing: border-box;
+}
+.container .wrap article section h2 {
+  font-size: 10.66666667vw;
+  line-height: 15.33333333vw;
+  font-weight: 500;
+  letter-spacing: -0.05em;
+  margin-top: 17.33333333vw;
+}
+.container .wrap article section .select-box {
+  width: 51.06666667vw;
+  border-bottom: 4px solid #2d2d2f;
+  padding-bottom: 1.6vw;
+  box-sizing: border-box;
+  position: relative;
+  margin-top: 8vw;
+}
+.container .wrap article section .select-box:after {
+  content: '';
+  display: block;
+  width: 5.33333333vw;
+  height: 3.06666667vw;
+  background-repeat: no-repeat;
+  background-image: url('../img/mo/arr-d.png');
+  background-size: contain;
+  position: absolute;
+  right: 0.4vw;
+  top: 2.26666667vw;
+  left: auto;
+  bottom: auto;
+  pointer-events: none;
+}
+.container .wrap article section .select-box ul li {
+  font-size: 5.33333333vw;
+  font-weight: 700;
+  height: 6.4vw;
+  line-height: 6.4vw;
+  display: none;
+}
+.container .wrap article section .select-box ul li a {
+  pointer-events: none;
+}
+.container .wrap article section .select-box ul li:nth-child(1) {
+  display: inline-block;
+}
+.container .wrap article section .select-box ul li i.en {
+  letter-spacing: -0.075em;
+}
+.container .wrap article section .select-box.active:after {
+  transform: rotate(-180deg);
+}
+.container .wrap article section .select-box.active ul li {
+  display: inline-block;
+}
+.container .wrap article section .select-box.active ul li:last-child {
+  margin-top: 4.26666667vw;
+}
+.container .wrap article section .select-box.active ul li a {
+  pointer-events: auto;
 }
 .container .wrap article section.main {
   height: 175.06666667vw;
@@ -374,64 +434,6 @@ select {
   box-sizing: border-box;
   text-align: left;
 }
-.container .wrap article section.ceo h2 {
-  font-size: 10.66666667vw;
-  line-height: 15.33333333vw;
-  font-weight: 500;
-  letter-spacing: -0.05em;
-  margin-top: 17.33333333vw;
-}
-.container .wrap article section.ceo .select-box {
-  width: 51.06666667vw;
-  border-bottom: 4px solid #2d2d2f;
-  padding-bottom: 1.6vw;
-  box-sizing: border-box;
-  position: relative;
-  margin-top: 8vw;
-}
-.container .wrap article section.ceo .select-box:after {
-  content: '';
-  display: block;
-  width: 5.33333333vw;
-  height: 3.06666667vw;
-  background-repeat: no-repeat;
-  background-image: url('../img/mo/arr-d.png');
-  background-size: contain;
-  position: absolute;
-  right: 0.4vw;
-  top: 2.26666667vw;
-  left: auto;
-  bottom: auto;
-  pointer-events: none;
-}
-.container .wrap article section.ceo .select-box ul li {
-  font-size: 5.33333333vw;
-  font-weight: 700;
-  height: 6.4vw;
-  line-height: 6.4vw;
-  display: none;
-}
-.container .wrap article section.ceo .select-box ul li a {
-  pointer-events: none;
-}
-.container .wrap article section.ceo .select-box ul li:nth-child(1) {
-  display: inline-block;
-}
-.container .wrap article section.ceo .select-box ul li i.en {
-  letter-spacing: -0.075em;
-}
-.container .wrap article section.ceo .select-box.active:after {
-  transform: rotate(-180deg);
-}
-.container .wrap article section.ceo .select-box.active ul li {
-  display: inline-block;
-}
-.container .wrap article section.ceo .select-box.active ul li:last-child {
-  margin-top: 4.26666667vw;
-}
-.container .wrap article section.ceo .select-box.active ul li a {
-  pointer-events: auto;
-}
 .container .wrap article section.ceo[data-nm="1"] .ceo-letter .tit img {
   width: 65.86666667vw;
   height: 7.33333333vw;
@@ -442,9 +444,6 @@ select {
 }
 .container .wrap article section.ceo .ceo-letter {
   margin-top: 11.2vw;
-  padding-bottom: 26.26666667vw;
-  box-sizing: border-box;
-  border-bottom: 2px solid #000;
 }
 .container .wrap article section.ceo .ceo-letter .tit {
   font-size: 6.4vw;
@@ -477,6 +476,13 @@ select {
 .container .wrap article section.ceo .ceo-letter .txt p.sign.en {
   font-weight: 700;
 }
+.container .wrap article section.about {
+  padding-top: 0vw;
+  padding-right: 9.33333333vw;
+  padding-bottom: 0vw;
+  padding-left: 9.33333333vw;
+  text-align: left;
+}
 .container .wrap.kr-view .header .lang-ch .kr-lang {
   display: none;
 }
@@ -503,6 +509,18 @@ select {
 }
 .container .wrap footer {
   position: relative;
+}
+.container .wrap footer:after {
+  content: '';
+  display: block;
+  width: 81.33333333vw;
+  height: 0.53333333vw;
+  background-color: #000;
+  position: absolute;
+  left: 9.33333333vw;
+  top: 0vw;
+  right: auto;
+  bottom: auto;
 }
 .container .wrap footer .copy {
   font-size: 2.4vw;

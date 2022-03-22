@@ -49,7 +49,27 @@ select { outline: none; font-family: 'Noto Serif KR', serif; }
     }
 
     article {
-      section { .rel; z-index: 2;
+      section { .rel; z-index: 2; .pb(197)!important; .-box;
+        h2 { .fs(80); .lh(115); .medium; .ls(-0.05em); .mt(130); }
+        .select-box { .w(383); .-b(#2d2d2f,4px); .pb(12); .-box; .rel; .mt(60);
+          &:after { .cnt; .wh(40,23); .contain('../img/mo/arr-d.png'); .abs; .rt(3,17); pointer-events: none; }
+          ul {
+            li { .fs(40); .bold; .h(48); .lh(48); .hide;
+              a { pointer-events: none; }
+              &:nth-child(1) { .ib; }
+              i.en { .ls(-0.075em); }
+            }
+          }
+          &.active {
+            &:after { transform: rotate(-180deg); }
+            ul li { .ib;
+              &:last-child { .mt(32); }
+              a { pointer-events: auto; }
+            }
+          }
+        }
+
+
         &.main { .h(1313); .pt(275); .-box;
           h1 { .wh(559,83); .contain('../img/mo/boryung.png'); .mh-c; transform: translateY(0); transition: all 1s; }
           .ani { .fs(54); .ls(-0.05em); .tl; .abs; .lt(103,550); .hide;
@@ -85,28 +105,10 @@ select { outline: none; font-family: 'Noto Serif KR', serif; }
 
 
         &.ceo { .p(0,70); .-box; .tl;
-          h2 { .fs(80); .lh(115); .medium; .ls(-0.05em); .mt(130); }
-          .select-box { .w(383); .-b(#2d2d2f,4px); .pb(12); .-box; .rel; .mt(60);
-            &:after { .cnt; .wh(40,23); .contain('../img/mo/arr-d.png'); .abs; .rt(3,17); pointer-events: none; }
-            ul {
-              li { .fs(40); .bold; .h(48); .lh(48); .hide;
-                a { pointer-events: none; }
-                &:nth-child(1) { .ib; }
-                i.en { .ls(-0.075em); }
-              }
-            }
-            &.active {
-              &:after { transform: rotate(-180deg); }
-              ul li { .ib;
-                &:last-child { .mt(32); }
-                a { pointer-events: auto; }
-              }
-            }
-          }
           &[data-nm="1"] .ceo-letter .tit img { .wh(494,55); }
           &[data-nm="2"] .ceo-letter .tit img { .wh(595,52); }
 
-          .ceo-letter { .mt(84); .pb(197); .-box; .-b(#000,2px);
+          .ceo-letter { .mt(84);
             .tit { .fs(48); .ls(-0.075em); .light;
               .nm { .fs(24); }
             }
@@ -119,6 +121,12 @@ select { outline: none; font-family: 'Noto Serif KR', serif; }
               }
             }
           }
+        }
+        &.about { .p(0,70); .tl;
+          .contents {
+            .cont { }
+          }
+
         }
       }
     }
@@ -150,6 +158,7 @@ select { outline: none; font-family: 'Noto Serif KR', serif; }
     }
 
     footer { .rel;
+      &:after { .cnt; .wh(610,4); .bgc(#000); .abs; .lt(70,0); }
       .copy { .fs(18); .lh(31); color:#a29992; .tl; .p(30,0,0,70); .-box; }
       .go-top { .fs(20); .black; color:#3b3b3c; .tc; .wh(80,70); .-a(#3b3b3c,2px); .-box; .abs; .rt(20,-37); .pt(30); .bgc(#fff); z-index: 5;
         &:after { .cnt; .wh(17,10); .abs; .lt(30,15); .contain('../img/mo/go-top.png'); pointer-events: none; }
